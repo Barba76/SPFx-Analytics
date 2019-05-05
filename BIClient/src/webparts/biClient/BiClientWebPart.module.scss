@@ -1,0 +1,200 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import url(https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css);
+
+$bodyBackground: '[theme:bodyBackground, default:#fff]';
+$bodyText: '[theme:bodyText, default:#000]';
+$themeDark: '[theme:themeDarker, default:#666666]';
+$themePrimary: '[theme:themePrimary, default:#000000]';
+$themeWhite: '[theme:white, default:white]';
+$themeBlack: '[theme:black, default:black]';
+$neutralLighter: '[theme:neutralLighter, default:white]';
+$neutralLighterAlt: '[theme:neutralLighterAlt, default:white]';
+$neutralLight: '[theme:neutralLight, default:lightgray]';
+$neutralDark: '[theme:neutralDark, default:darkgray]';
+$neutralPrimary : '[theme:neutralPrimary, default:gray]';
+$neutralPrimaryAlt : '[theme:neutralPrimaryAlt, default:gray]';
+$neutralSecondary : '[theme:neutralSecondary, default:gray]';
+$neutralSecondaryAlt : '[theme:neutralSecondaryAlt, default:gray]';
+$link:'[theme:link, default:blue]';
+$linkHovered:'[theme:linkHovered, default:cyan]';
+$listBackground : '[theme:listBackground, default:white]';
+$DisabledText : '[theme:DisabledText, default:lightgray]';
+$black: '[theme:black, default:black]';
+$disabledBodyText: '[theme:disabledBodyText, default:#ddd]';
+
+.biClient {
+
+  padding:5px;
+//  box-shadow:3px 4px 8px 1px rgba(0,0,0,0.05);
+
+  .widget_title{
+    text-align: center;
+    padding:15px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .card_widget{
+    background-color: $neutralLighter;
+    box-shadow:none;
+    border: 3px solid;
+    border-color: $neutralLight;
+  }
+
+  .bi_card,
+  .kpi_card{
+    position: relative;
+    margin:5px;
+    text-align: center;
+    display: block;
+    background: $neutralLighter;
+  }
+
+  .kpi_card{
+    &.down_value{
+      .kpi_performance_icon{
+        color: red;
+        top:initial;
+        bottom:-8px;
+      }
+    }
+    &.up_value{
+      .kpi_performance_icon{
+        color: green;
+        bottom: initial;
+        top:15px;
+      }
+    }
+  }
+
+  .kpi_label{
+    display: block;
+    font-size: 9px;
+  }
+
+  .kpi_title{
+    color:$neutralDark;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .kpi_performance_wrapper{
+    position: absolute;
+    left:0px;
+    top:0;
+    width:50px;
+    height:100%;
+    border: none;
+    background: $neutralLight;
+  }
+
+  .kpi_performance_icon{
+    color:white;
+    position: absolute;
+    left: 13px;
+    transform: translateY(-50%);
+    font-size: 24px;
+  }
+
+  .kpi_info_wrapper{
+    margin-left:50px;
+  }
+
+  .kpi_value{
+    margin:0px;
+    padding: 3px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .secondary_information{
+    display: inline-flex;
+  }
+
+  .kpi_goal{
+    margin:5px;
+    padding: 7px;
+    font-size: 18px;
+  }
+
+  .kpi_performance{
+    margin:5px;
+    padding: 7px;
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
+
+
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}

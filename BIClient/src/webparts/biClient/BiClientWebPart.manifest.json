@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "f4746def-38d5-41ac-b15a-692a1bbaa30f",
+  "alias": "BiClientWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "BiClient" },
+    "description": { "default": "BiClient description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "BiClient",
+      "maxHeight" : 200,
+      "title" : "BI Client"
+    }
+  }]
+}
